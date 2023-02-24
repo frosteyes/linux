@@ -4,3 +4,4 @@
 #
 obj-$(CONFIG_IPU_BRIDGE) += ipu-bridge.o
 obj-y	+= ipu3/
+obj-$(CONFIG_VIDEO_INTEL_IPU6)	+= ipu6/
