@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 config IPU_BRIDGE
 	bool "Intel IPU Sensors Bridge"
-	depends on VIDEO_IPU3_CIO2 && ACPI
+	depends on (VIDEO_IPU3_CIO2 || VIDEO_INTEL_IPU6) && ACPI
 	depends on I2C
 	help
 	  This extension provides an API for the Intel IPU driver to create
@@ -19,3 +19,4 @@ config IPU_BRIDGE
 	  If in doubt, say N here.
 
 source "drivers/media/pci/intel/ipu3/Kconfig"
+source "drivers/media/pci/intel/ipu6/Kconfig"
